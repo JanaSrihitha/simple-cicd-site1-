@@ -1,13 +1,12 @@
-name:Simple CI/CD
+name: Simple CI/CD
 on:
- push:
- branches:[main]
-
+push:
+branches: [ main ]
 jobs:
 deploy:
-runs-on:ubuntu-latest
+runs-on: ubuntu-latest
 steps:
--name:get code
-users:actions/chechout@v3
--name:Simulate Deployment
-run:echo "Website deployed successfully!"
+- name: Get code
+uses: actions/checkout@v3
+- name: Simulate Deployment
+run: echo &quot;Website deployed successfully!&quot;
